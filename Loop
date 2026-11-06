@@ -1,0 +1,81 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        string again = "Y";
+
+        while (again == "Y")
+        {
+            Console.Write("Enter Your Name: ");
+            string name = Console.ReadLine()!;
+
+            Console.Write("Programming 3: ");
+            double grade1 = double.Parse(Console.ReadLine()!);
+
+            Console.Write("Data Structures and Algorithms: ");
+            double grade2 = double.Parse(Console.ReadLine()!);
+
+            Console.Write("Data Communication and Networking: ");
+            double grade3 = double.Parse(Console.ReadLine()!);
+
+            Console.Write("Operating Systems: ");
+            double grade4 = double.Parse(Console.ReadLine()!);
+
+            Console.Write("Social and Professional Issues in Computing: ");
+            double grade5 = double.Parse(Console.ReadLine()!);
+
+            double average = (grade1 + grade2 + grade3 + grade4 + grade5) / 5;
+
+            Console.WriteLine();
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Average Grade: " + average.ToString("F2"));
+
+            if (average >= 97)
+            {
+                Console.WriteLine("Equivalent: 1.00");
+            }
+            else if (average >= 94)
+            {
+                Console.WriteLine("Equivalent: 1.25");
+            }
+            else if (average >= 91)
+            {
+                Console.WriteLine("Equivalent: 1.50");
+            }
+            else if (average >= 88)
+            {
+                Console.WriteLine("Equivalent: 1.75");
+            }
+            else if (average >= 85)
+            {
+                Console.WriteLine("Equivalent: 2.00");
+            }
+            else if (average >= 82)
+            {
+                Console.WriteLine("Equivalent: 2.25");
+            }
+            else if (average >= 79)
+            {
+                Console.WriteLine("Equivalent: 2.50");
+            }
+            else if (average >= 76)
+            {
+                Console.WriteLine("Equivalent: 2.75");
+            }
+            else if (average >= 75)
+            {
+                Console.WriteLine("Equivalent: 3.00");
+            }
+            else
+            {
+                Console.WriteLine("Equivalent: 5.00");
+            }
+
+            Console.WriteLine();
+            Console.Write("Do you want to evaluate your grades again? (Y/N): ");
+            again = (Console.ReadLine() ?? "N").Trim().ToUpper();
+
+            Console.WriteLine();
+        }
+    }
+}
