@@ -1,0 +1,23 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int num1 = int.Parse(Console.ReadLine()!);
+
+        Console.Write("Enter second number: ");
+        int num2 = int.Parse(Console.ReadLine()!);
+
+        if (num1 > num2)
+        {
+            Console.WriteLine("First number is greater.");
+        }
+        else
+        {
+            Console.WriteLine("Second number is greater or equal.");
+        }
+    }
+}
