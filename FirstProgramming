@@ -1,0 +1,74 @@
+﻿Console.WriteLine("__________________________________________________");
+/* Display Hello World */
+Console.WriteLine("Hello World");
+Console.WriteLine("__________________________________________________");
+
+/* 5 things about me */
+Console.WriteLine("5 things about me");
+Console.WriteLine("Hello world! My name is Margarette, but I prefer Marga");
+Console.WriteLine("I am an introvert person");
+Console.WriteLine("I am into quiet places");
+Console.WriteLine("I value things");
+Console.WriteLine("I like watching anime and movies");
+Console.WriteLine("I love being alone");
+Console.WriteLine("__________________________________________________");
+Console.WriteLine("__________________________________________________");
+
+/* Display your name and age */
+Console.WriteLine("Enter a name: ");
+string name = Console.ReadLine();
+
+Console.WriteLine("Enter your age: ");
+int age = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Hello world, my name is " + name + " and my age is " + age);
+
+Console.WriteLine("__________________________________________________");
+
+/* Basic Calculator */
+
+string again;
+
+do
+{
+    Console.Write("Enter First Number: ");
+    int n1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter an Operator: ");
+    string op = Console.ReadLine();
+
+    Console.Write("Enter Second Number: ");
+    int n2 = Convert.ToInt32(Console.ReadLine());
+
+    if (op == "+")
+    {
+        Console.WriteLine("Result: " + (n1 + n2));
+    }
+    else if (op == "-")
+    {
+        Console.WriteLine("Result: " + (n1 - n2));
+    }
+    else if (op == "*")
+    {
+        Console.WriteLine("Result: " + (n1 * n2));
+    }
+    else if (op == "/")
+    {
+        if (n2 != 0)
+        {
+            Console.WriteLine("Result: " + (n1 / n2));
+        }
+        else
+        {
+            Console.WriteLine("Cannot divide by zero.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid Operator");
+    }
+
+    Console.Write("Calculate again? (yes/no): ");
+    again = Console.ReadLine();
+
+} while (again.ToLower() == "yes" || again.ToLower() == "y");
