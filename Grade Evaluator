@@ -1,0 +1,64 @@
+Console.Write("Enter Your Name: ");
+string name = Console.ReadLine()!;
+Console.Write("Programming 3: ");
+double grade1 = double.Parse(Console.ReadLine()!);
+
+Console.Write("Data Structures and Algorithms: ");
+double grade2 = double.Parse(Console.ReadLine()!);
+
+Console.Write("Data Communication and Networking: ");
+double grade3 = double.Parse(Console.ReadLine()!);
+
+Console.Write("Operating Systems: ");
+double grade4 = double.Parse(Console.ReadLine()!);
+
+Console.Write("Social and Professional issues in Computing: ");
+double grade5 = double.Parse(Console.ReadLine()!);
+
+double average = (grade1 + grade2 + grade3 + grade4 + grade5) / 5;
+
+Console.WriteLine("Name: " + name);
+
+if (average >= 75)
+{
+    if (average >= 97)
+    {
+        Console.Write("Average: 1.0");
+    }
+    else if (average >= 94 && average <= 96)
+    {
+        Console.Write("Average: 1.25");
+    }
+    else if (average >= 91 && average <= 93)
+    {
+        Console.Write("Average: 1.50");
+    }
+    else if (average >= 88 && average <= 90)
+    {
+        Console.Write("Average: 1.75");
+    }
+    else if (average >= 85 && average <= 87)
+    {
+        Console.Write("Average: 2.00");
+    }
+    else if (average >= 82 && average <= 84)
+    {
+        Console.Write("Average: 2.25");
+    }
+    else if (average >= 79 && average <= 81)
+    {
+        Console.Write("Average: 2.50");
+    }
+    else if (average >= 76 && average <= 78)
+    {
+        Console.Write("Average: 2.75");
+    }
+    else if (average == 75)
+    {
+        Console.Write("Average: 3.00");
+    }
+}
+else
+{
+    Console.Write("Average: 5.00");
+}
