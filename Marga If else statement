@@ -39,7 +39,7 @@ class Program
 
         if (choice == 1)
         {
-            Console.WriteLine("\nSELECT A ROOM");
+            Console.WriteLine("SELECT A ROOM");
             Console.WriteLine("1. ROOM 207");
             Console.WriteLine("2. ROOM 209");
             Console.WriteLine("3. ROOM 211");
