@@ -1,3 +1,4 @@
+
 using System;
 
 class Program
@@ -32,15 +33,6 @@ class Program
             {
                 Console.Write(information[i][j] + ": ");
                 string answer = Console.ReadLine()!;
-
-                if (answer == "")
-                {
-                    Console.WriteLine("Input is required!");
-                }
-                else
-                {
-                    Console.WriteLine("Successfully recorded!");
-                }
             }
 
             Console.WriteLine();
@@ -66,7 +58,39 @@ class Program
 
         if (choice == 1)
         {
-            Console.WriteLine("Selected: ROOM 207, 209, 211");
+            Console.WriteLine("\nAVAILABLE COMPUTER ROOMS");
+
+            string[] computerRooms =
+            {
+                "ROOM 207",
+                "ROOM 209",
+                "ROOM 211"
+            };
+
+            for (int i = 0; i < computerRooms.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + computerRooms[i]);
+            }
+
+            Console.Write("Select Room (1-3): ");
+            int roomChoice = int.Parse(Console.ReadLine()!);
+
+            if (roomChoice == 1)
+            {
+                Console.WriteLine("Selected: ROOM 207");
+            }
+            else if (roomChoice == 2)
+            {
+                Console.WriteLine("Selected: ROOM 209");
+            }
+            else if (roomChoice == 3)
+            {
+                Console.WriteLine("Selected: ROOM 211");
+            }
+            else
+            {
+                Console.WriteLine("Invalid room selection!");
+            }
         }
         else if (choice == 2)
         {
