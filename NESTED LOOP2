@@ -1,0 +1,39 @@
+class Program
+{
+    static void Main()
+    {
+        string[][] information =
+        {
+            new string[]
+            {
+                "STUDENT NAME",
+                "STUDENT NO."
+            },
+
+            new string[]
+            {
+                "SECTION",
+                "DAY OF RESERVATION",
+                "TIME OF RESERVATION"
+            },
+
+            new string[]
+            {
+                "PROFS NAME",
+                "SUBJECT CODE",
+                "LABORATORY ROOM TO SERVE"
+            }
+        };
+
+        for (int i = 0; i < information.Length; i++)
+        {
+            for (int j = 0; j < information[i].Length; j++)
+            {
+                Console.Write(information[i][j] + ": ");
+                string answer = Console.ReadLine()!;
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
