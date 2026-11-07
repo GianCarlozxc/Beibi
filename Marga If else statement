@@ -5,75 +5,47 @@ class Program
 {
     static void Main()
     {
-        string[][] info =
-        {
-            new string[]
-            {
-                "STUDENT NAME",
-                "STUDENT NO."
-            },
+        Console.Write("STUDENT NAME: ");
+        string studentName = Console.ReadLine();
 
-            new string[]
-            {
-                "SECTION",
-                "DAY OF RESERVATION",
-                "TIME OF RESERVATION"
-            },
+        Console.Write("STUDENT NO.: ");
+        string studentNo = Console.ReadLine();
 
-            new string[]
-            {
-                "PROFS NAME",
-                "SUBJECT CODE"
-            }
-        };
+        Console.Write("SECTION: ");
+        string section = Console.ReadLine();
 
-        for (int i = 0; i < info.Length; i++)
-        {
-            for (int j = 0; j < info[i].Length; j++)
-            {
-                Console.Write(info[i][j] + ": ");
-                string answer = Console.ReadLine()!;
-            }
+        Console.Write("DAY OF RESERVATION: ");
+        string day = Console.ReadLine();
 
-            Console.WriteLine();
-        }
+        Console.Write("TIME OF RESERVATION: ");
+        string time = Console.ReadLine();
+
+        Console.Write("PROFS NAME: ");
+        string profName = Console.ReadLine();
+
+        Console.Write("SUBJECT CODE: ");
+        string subjectCode = Console.ReadLine();
+
+        Console.WriteLine();
 
         Console.WriteLine("LABORATORY ROOM TO SERVE");
-
-        string[] rooms =
-        {
-            "ROOM 207, 209, 211",
-            "CHEM LAB 201",
-            "PHYSICS LAB 203",
-            "DIGITAL LAB 202"
-        };
-
-        for (int i = 0; i < rooms.Length; i++)
-        {
-            Console.WriteLine((i + 1) + ". " + rooms[i]);
-        }
+        Console.WriteLine("1. ROOM 207, 209, 211");
+        Console.WriteLine("2. CHEM LAB 201");
+        Console.WriteLine("3. PHYSICS LAB 203");
+        Console.WriteLine("4. DIGITAL LAB 202");
 
         Console.Write("Choose Laboratory Room (1-4): ");
-        int choice = int.Parse(Console.ReadLine()!);
+        int choice = Convert.ToInt32(Console.ReadLine());
 
         if (choice == 1)
         {
-            Console.WriteLine("SELECT A ROOM");
-
-            string[] computerRooms =
-            {
-                "ROOM 207",
-                "ROOM 209",
-                "ROOM 211"
-            };
-
-            for (int i = 0; i < computerRooms.Length; i++)
-            {
-                Console.WriteLine((i + 1) + ". " + computerRooms[i]);
-            }
+            Console.WriteLine("\nSELECT A ROOM");
+            Console.WriteLine("1. ROOM 207");
+            Console.WriteLine("2. ROOM 209");
+            Console.WriteLine("3. ROOM 211");
 
             Console.Write("Choose a room (1-3): ");
-            int room = int.Parse(Console.ReadLine()!);
+            int room = Convert.ToInt32(Console.ReadLine());
 
             if (room == 1)
             {
