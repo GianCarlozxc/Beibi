@@ -1,0 +1,88 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[][] information =
+        {
+            new string[]
+            {
+                "STUDENT NAME",
+                "STUDENT NO."
+            },
+
+            new string[]
+            {
+                "SECTION",
+                "DAY OF RESERVATION",
+                "TIME OF RESERVATION"
+            },
+
+            new string[]
+            {
+                "PROFS NAME",
+                "SUBJECT CODE"
+            }
+        };
+
+        for (int i = 0; i < information.Length; i++)
+        {
+            for (int j = 0; j < information[i].Length; j++)
+            {
+                Console.Write(information[i][j] + ": ");
+                string answer = Console.ReadLine()!;
+
+                if (answer == "")
+                {
+                    Console.WriteLine("Input is required!");
+                }
+                else
+                {
+                    Console.WriteLine("Successfully recorded!");
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("LABORATORY ROOM TO SERVE");
+
+        string[] rooms =
+        {
+            "ROOM 207, 209, 211",
+            "CHEM LAB 201",
+            "PHYSICS LAB 203",
+            "DIGITAL LAB 202"
+        };
+
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            Console.WriteLine((i + 1) + ". " + rooms[i]);
+        }
+
+        Console.Write("\nSelect Laboratory Room (1-4): ");
+        int choice = int.Parse(Console.ReadLine()!);
+
+        if (choice == 1)
+        {
+            Console.WriteLine("Selected: ROOM 207, 209, 211");
+        }
+        else if (choice == 2)
+        {
+            Console.WriteLine("Selected: CHEM LAB 201");
+        }
+        else if (choice == 3)
+        {
+            Console.WriteLine("Selected: PHYSICS LAB 203");
+        }
+        else if (choice == 4)
+        {
+            Console.WriteLine("Selected: DIGITAL LAB 202");
+        }
+        else
+        {
+            Console.WriteLine("Invalid laboratory room!");
+        }
+    }
+}
