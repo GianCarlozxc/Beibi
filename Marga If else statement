@@ -1,0 +1,127 @@
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[][] info =
+        {
+            new string[]
+            {
+                "STUDENT NAME",
+                "STUDENT NO."
+            },
+
+            new string[]
+            {
+                "SECTION",
+                "DAY OF RESERVATION",
+                "TIME OF RESERVATION"
+            },
+
+            new string[]
+            {
+                "PROFS NAME",
+                "SUBJECT CODE"
+            }
+        };
+
+        for (int i = 0; i < info.Length; i++)
+        {
+            for (int j = 0; j < info[i].Length; j++)
+            {
+                Console.Write(info[i][j] + ": ");
+                string answer = Console.ReadLine()!;
+            }
+
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("LABORATORY ROOM TO SERVE");
+
+        string[] rooms =
+        {
+            "ROOM 207, 209, 211",
+            "CHEM LAB 201",
+            "PHYSICS LAB 203",
+            "DIGITAL LAB 202"
+        };
+
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            Console.WriteLine((i + 1) + ". " + rooms[i]);
+        }
+
+        Console.Write("Choose Laboratory Room (1-4): ");
+        int choice = int.Parse(Console.ReadLine()!);
+
+        if (choice == 1)
+        {
+            Console.WriteLine("SELECT A ROOM");
+
+            string[] computerRooms =
+            {
+                "ROOM 207",
+                "ROOM 209",
+                "ROOM 211"
+            };
+
+            for (int i = 0; i < computerRooms.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + computerRooms[i]);
+            }
+
+            Console.Write("Choose a room (1-3): ");
+            int room = int.Parse(Console.ReadLine()!);
+
+            if (room == 1)
+            {
+                Console.WriteLine("You selected ROOM 207.");
+            }
+            else
+            {
+                if (room == 2)
+                {
+                    Console.WriteLine("You selected ROOM 209.");
+                }
+                else
+                {
+                    if (room == 3)
+                    {
+                        Console.WriteLine("You selected ROOM 211.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid room choice!");
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (choice == 2)
+            {
+                Console.WriteLine("You selected CHEM LAB 201.");
+            }
+            else
+            {
+                if (choice == 3)
+                {
+                    Console.WriteLine("You selected PHYSICS LAB 203.");
+                }
+                else
+                {
+                    if (choice == 4)
+                    {
+                        Console.WriteLine("You selected DIGITAL LAB 202.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid laboratory choice!");
+                    }
+                }
+            }
+        }
+    }
+}
