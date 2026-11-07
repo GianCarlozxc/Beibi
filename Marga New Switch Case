@@ -40,7 +40,7 @@ class Program
         switch (selectedLab)
         {
             case 1:
-                Console.WriteLine("\nCHOOSE A COMPUTER LABORATORY");
+                Console.WriteLine("CHOOSE A COMPUTER LABORATORY");
                 Console.WriteLine("1. ROOM 207");
                 Console.WriteLine("2. ROOM 209");
                 Console.WriteLine("3. ROOM 211");
