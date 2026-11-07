@@ -5,84 +5,98 @@ class Program
 {
     static void Main()
     {
-        Console.Write("STUDENT NAME: ");
-        string studentName = Console.ReadLine();
+        string again;
 
-        Console.Write("STUDENT NUMBER: ");
-        string studentNumber = Console.ReadLine();
-
-        Console.Write("SECTION: ");
-        string section = Console.ReadLine();
-
-        Console.Write("DAY OF RESERVATION: ");
-        string day = Console.ReadLine();
-
-        Console.Write("TIME OF RESERVATION: ");
-        string time = Console.ReadLine();
-
-        Console.Write("PROF'S NAME: ");
-        string profName = Console.ReadLine();
-
-        Console.Write("SUBJECT CODE: ");
-        string subjectCode = Console.ReadLine();
-
-        Console.WriteLine();
-
-        Console.WriteLine("AVAILABLE LABORATORY CATEGORIES");
-        Console.WriteLine("1. COMPUTER LABORATORY (ROOM 207, 209, 211)");
-        Console.WriteLine("2. CHEMISTRY LABORATORY (ROOM 201)");
-        Console.WriteLine("3. PHYSICS LABORATORY (ROOM 203)");
-        Console.WriteLine("4. DIGITAL LABORATORY (ROOM 202)");
-
-        Console.Write("Enter your laboratory choice (1-4): ");
-        int selectedLab = Convert.ToInt32(Console.ReadLine());
-
-        switch (selectedLab)
+        do
         {
-            case 1:
-                Console.WriteLine("CHOOSE A COMPUTER LABORATORY");
-                Console.WriteLine("1. ROOM 207");
-                Console.WriteLine("2. ROOM 209");
-                Console.WriteLine("3. ROOM 211");
+            Console.Write("STUDENT NAME: ");
+            string studentName = Console.ReadLine();
 
-                Console.Write("Enter your preferred room (1-3): ");
-                int selectedRoom = Convert.ToInt32(Console.ReadLine());
+            Console.Write("STUDENT NUMBER: ");
+            string studentNumber = Console.ReadLine();
 
-                switch (selectedRoom)
-                {
-                    case 1:
-                        Console.WriteLine("You selected ROOM 207.");
-                        break;
+            Console.Write("SECTION: ");
+            string section = Console.ReadLine();
 
-                    case 2:
-                        Console.WriteLine("You selected ROOM 209.");
-                        break;
+            Console.Write("DAY OF RESERVATION: ");
+            string day = Console.ReadLine();
 
-                    case 3:
-                        Console.WriteLine("You selected ROOM 211.");
-                        break;
+            Console.Write("TIME OF RESERVATION: ");
+            string time = Console.ReadLine();
 
-                    default:
-                        Console.WriteLine("Invalid room selection.");
-                        break;
-                }
-                break;
+            Console.Write("PROF'S NAME: ");
+            string profName = Console.ReadLine();
 
-            case 2:
-                Console.WriteLine("You selected CHEMISTRY LABORATORY: ROOM 201.");
-                break;
+            Console.Write("SUBJECT CODE: ");
+            string subjectCode = Console.ReadLine();
 
-            case 3:
-                Console.WriteLine("You selected PHYSICS LABORATORY: ROOM 203.");
-                break;
+            Console.WriteLine();
 
-            case 4:
-                Console.WriteLine("You selected DIGITAL LABORATORY: ROOM 202.");
-                break;
+            Console.WriteLine("AVAILABLE LABORATORY CATEGORIES");
+            Console.WriteLine("1. COMPUTER LABORATORY (ROOM 207, 209, 211)");
+            Console.WriteLine("2. CHEMISTRY LABORATORY (ROOM 201)");
+            Console.WriteLine("3. PHYSICS LABORATORY (ROOM 203)");
+            Console.WriteLine("4. DIGITAL LABORATORY (ROOM 202)");
 
-            default:
-                Console.WriteLine("Invalid laboratory category.");
-                break;
-        }
+            Console.Write("Enter your laboratory choice (1-4): ");
+            int selectedLab = Convert.ToInt32(Console.ReadLine());
+
+            switch (selectedLab)
+            {
+                case 1:
+                    Console.WriteLine("CHOOSE A COMPUTER LABORATORY");
+                    Console.WriteLine("1. ROOM 207");
+                    Console.WriteLine("2. ROOM 209");
+                    Console.WriteLine("3. ROOM 211");
+
+                    Console.Write("Enter your preferred room (1-3): ");
+                    int selectedRoom = Convert.ToInt32(Console.ReadLine());
+
+                    switch (selectedRoom)
+                    {
+                        case 1:
+                            Console.WriteLine("You selected ROOM 207.");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("You selected ROOM 209.");
+                            break;
+
+                        case 3:
+                            Console.WriteLine("You selected ROOM 211.");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid room selection.");
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    Console.WriteLine("You selected CHEMISTRY LABORATORY: ROOM 201.");
+                    break;
+
+                case 3:
+                    Console.WriteLine("You selected PHYSICS LABORATORY: ROOM 203.");
+                    break;
+
+                case 4:
+                    Console.WriteLine("You selected DIGITAL LABORATORY: ROOM 202.");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid laboratory category.");
+                    break;
+            }
+
+            Console.WriteLine();
+            Console.Write("ANOTHER RESERVATION? (Y/N): ");
+            again = Console.ReadLine().ToUpper();
+
+            Console.WriteLine();
+
+        } while (again == "Y");
+
+        Console.WriteLine("THE LABORATORY RESERVATION SYSTEM EXIT");
     }
 }
