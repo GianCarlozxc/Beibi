@@ -61,7 +61,7 @@ class Program
             Console.WriteLine((i + 1) + ". " + rooms[i]);
         }
 
-        Console.Write("\nSelect Laboratory Room (1-4): ");
+        Console.Write("Select Laboratory Room (1-4): ");
         int choice = int.Parse(Console.ReadLine()!);
 
         if (choice == 1)
@@ -70,15 +70,15 @@ class Program
         }
         else if (choice == 2)
         {
-            Console.WriteLine("Selected: CHEM LAB 201");
+            Console.WriteLine("CHEM LAB 201");
         }
         else if (choice == 3)
         {
-            Console.WriteLine("Selected: PHYSICS LAB 203");
+            Console.WriteLine("PHYSICS LAB 203");
         }
         else if (choice == 4)
         {
-            Console.WriteLine("Selected: DIGITAL LAB 202");
+            Console.WriteLine("DIGITAL LAB 202");
         }
         else
         {
